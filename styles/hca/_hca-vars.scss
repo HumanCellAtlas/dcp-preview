@@ -1,0 +1,18 @@
+/*!
+ * Human Cell Atlas
+ * https://www.humancellatlas.org/
+ *
+ * Global variables.
+ */
+
+/**
+ * Material Design media break points
+ **/
+$md-xl-min: 1920px;
+$md-lg-min: 1280px;
+$md-lg-max: $md-xl-min - 1;
+$md-md-min: 960px;
+$md-md-max: $md-lg-min - 1;
+$md-sm-min: 600px;
+$md-sm-max: $md-md-min - 1;
+$md-xs-max: $md-sm-min - 1;

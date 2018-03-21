@@ -1,0 +1,15 @@
+/*!
+ * Human Cell Atlas
+ * https://www.humancellatlas.org/
+ *
+ * Material Components toolbar as well as custom, HCA-specific overrides.
+ */
+
+// Toolbar - https://material.io/components/web/catalog/toolbar/
+@import "@material/toolbar/mdc-toolbar";
+
+// HCA overrides
+.mdc-toolbar {
+    @include mdc-toolbar-fill-color($mdc-theme-background); // background-color
+    @include mdc-toolbar-ink-color(black); // color
+}
