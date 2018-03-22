@@ -20,9 +20,9 @@ Run the following command from the project's root directory to install the requi
 
 	npm install
 
-#### Material Web Components
+#### Material Components
 
-HCA Data Preview uses [https://material.io/components/web/](Material Web Components) for its Material Design library.
+HCA Data Preview uses Material Components ([https://material.io/components/web/](https://material.io/components/web/)) for its Material Design library.
 
 #### Dev Server
 
@@ -30,4 +30,4 @@ HCA Data Preview uses webpack to bundle the SASS. To view the HCA Data Preview, 
 
 	npm start
 
-The site can be viewed at `http:localhost:8080`.
+The site can be viewed at `http://localhost:8080`.
