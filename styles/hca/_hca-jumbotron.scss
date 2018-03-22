@@ -1,0 +1,26 @@
+/*!
+ * Human Cell Atlas
+ * https://www.humancellatlas.org/
+ *
+ * Styles for jumbotron area.
+ */
+
+.jumbotron {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 86px;
+    margin-top: 60px; // 15px inside toolbar + 60px above text = 75px as per spec
+    text-align: center;
+
+    // Override default Material margins to space jumbotron text correct distance from toolbar and jumbotron subtext
+    .value-prop {
+        margin: 0 0 16px;
+    }
+
+    // Override default Material margins to space subtext correct distance from main text
+    .description {
+        margin: 0;
+        max-width: 600px;
+    }
+}

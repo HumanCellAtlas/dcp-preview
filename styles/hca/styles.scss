@@ -5,6 +5,10 @@
  * Global and imported styles.
  */
 
+@import "hca-home"; // Styles specific to home page
+@import "hca-jumbotron";
 @import "hca-theme";
 @import "hca-toolbar";
 @import "hca-typography";
+@import "@material/layout-grid/mdc-layout-grid"; // Layout Grid - https://material.io/components/web/catalog/layout-grid/
+
