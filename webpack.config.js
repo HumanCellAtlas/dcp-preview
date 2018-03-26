@@ -5,7 +5,8 @@
  * Webpack configuration.
  */
 
-const { dirname, join } = require("path");
+// const { dirname, join } = require("path");
+const path = require("path");
 
 module.exports = [{
     entry: "./styles/hca/styles.scss",
@@ -28,7 +29,7 @@ module.exports = [{
                     loader: "sass-loader",
                     options: {
                         includePaths: [
-                            join(dirname(module.filename), "node_modules")
+                            path.join(path.dirname(module.filename), "node_modules")
                         ]
                     }
                 }
