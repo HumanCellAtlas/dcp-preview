@@ -11,7 +11,7 @@ const path = require("path");
 module.exports = [{
     entry: "./styles/hca/styles.scss",
     output: {
-        filename: "style-bundle.js"
+        filename: "site/style-bundle.js"
     },
     module: {
         rules: [{
@@ -20,7 +20,7 @@ module.exports = [{
                 {
                     loader: "file-loader",
                     options: {
-                        name: "bundle.css",
+                        name: "site/bundle.css",
                     }
                 },
                 { loader: "extract-loader" },
