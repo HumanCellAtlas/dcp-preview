@@ -10,9 +10,9 @@
 
 #### Clone Repo
 
-Clone the `hca-data-preview` repo:
+Clone the `dcp-preview` repo:
 
-	git@github.com:clevercanary/hca-data-preview.git
+	git@github.com:HumanCellAtlas/dcp-preview.git
 
 #### Install Packages
 
