@@ -1,14 +1,61 @@
 #!/bin/bash
 
-set -euo pipefail
-
-pip install --upgrade hca || (echo "Unable to install HCA. Retrying with sudo..."; sudo pip install --upgrade hca)
+DATASET_NAME="mouse_melanoma"
 
 REPLICA=aws
-HCA=hca
-if ! type $HCA >/dev/null 2>&1; then
-    HCA=~/.local/bin/hca
-fi
+HCA_CONFIG=~/.config/hca/config.json
+TMPDIR=`pwd`/.hca-tmp
+LOGFILE=${TMPDIR}/log
+BUNDLE_DIR=${DATASET_NAME}
+
+function initialize() {
+    set -euo pipefail
+
+    mkdir -p ${TMPDIR}
+    cp /dev/null ${LOGFILE}
+}
+
+function install_hca_tool() {
+    echo "Installing hca tool (see ${LOGFILE} for errors)..."
+
+    if ! pip install --upgrade hca >> ${LOGFILE} 2>&1 ; then
+        echo -e "\n\nThat failed, trying again as superuser.  You may be prompted for your password..."
+        sudo pip install --upgrade hca 2>&1 >> ${LOGFILE}
+    fi
+
+    HCA=hca
+    if ! type ${HCA} >/dev/null 2>&1; then
+        HCA=~/.local/bin/hca
+    fi
+}
+
+function check_hca_tool_config() {
+    echo "Checking hca tool config..."
+    if [ -e ${HCA_CONFIG} ] ; then
+        if grep -q "\"swagger_url\": \"https://dss.data.humancellatlas.org/v1/swagger.json\"" ${HCA_CONFIG} ; then
+        # We're good
+        :
+        else
+            echo -e "It looks like you have used the \"hca\" tool before and it has been configured to use an" \
+                 "environment other than production.\nPlease move, remove or correct your ${HCA_CONFIG} file."
+            exit 1
+        fi
+    fi
+}
+
+function download_bundles() {
+    mkdir -p ${DATASET_NAME}
+    for uuid in ${bundles} ; do
+        if [ -d ${BUNDLE_DIR}/${uuid} ] ; then
+            echo "Skipping $uuid, already downloaded."
+        else
+            echo "Downloading ${uuid} to ${BUNDLE_DIR}/${uuid}..."
+            ( cd ${TMPDIR} ; ${HCA} dss download --bundle-uuid ${uuid} --replica ${REPLICA} >> ${LOGFILE} )
+            mv ${TMPDIR}/${uuid} ${BUNDLE_DIR}
+            echo ""
+        fi
+    done
+}
 
 bundles="
 76c2d255-9dc3-46da-998e-2226a18e5423
@@ -6651,6 +6698,8 @@ b9b0d0fa-d319-4662-8611-dd5be86b4828
 8f409c87-8714-4e54-82b3-9a319117458e
 cc45ba3f-2292-4fc6-984a-fd1e8dbe3227
 "
-for uuid in $bundles; do
-    $HCA dss download --bundle-uuid $uuid --replica $REPLICA
-done
+
+initialize
+install_hca_tool
+check_hca_tool_config
+download_bundles
