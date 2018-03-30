@@ -7,18 +7,43 @@
  * Human Cell Atlas
  * https://www.humancellatlas.org/
  *
+ * Styles for download instructions area on home page.
+ */.download-instructions .code{background-color:#f8f8f8;font-family:monospace;font-size:1.125rem;padding:16px 50px;position:relative}.download-instructions .code:before{color:#999;content:"$";left:24px;position:absolute}/*!
+ * Human Cell Atlas
+ * https://www.humancellatlas.org/
+ *
+ * Styles for footer.
+ *//*!
+ * Human Cell Atlas
+ * https://www.humancellatlas.org/
+ *
+ * Global variables.
+ */.footer{border-top:1px solid #eaeaea;display:flex;flex-direction:column;margin-top:52px;padding-top:10px}.footer p{font-family:Roboto,sans-serif;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-size:.875rem;line-height:1.25rem;font-weight:400;letter-spacing:.04em;text-decoration:inherit;text-transform:inherit;margin:10px 0 0}@media (min-width:600px){.footer{align-items:center;flex-direction:row}.footer p{margin:0 0 0 20px}}/*!
+ * Human Cell Atlas
+ * https://www.humancellatlas.org/
+ *
+ * Global styles.
+ */a{color:#4a90e2;text-decoration:none}/*!
+ * Human Cell Atlas
+ * https://www.humancellatlas.org/
+ *
  * Global styles used across components.
  *//*!
  * Human Cell Atlas
  * https://www.humancellatlas.org/
  *
  * Global variables.
- */.page-container{margin:0 auto;max-width:800px}.page-container.mdc-layout-grid{margin-bottom:100px}.page-container h2{font-family:Roboto,sans-serif;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-size:2.125rem;line-height:2.5rem;font-weight:400;letter-spacing:normal;text-decoration:inherit;text-transform:inherit;letter-spacing:0}.page-container h3{font-size:1.5rem;letter-spacing:normal;letter-spacing:0}.page-container h3,.page-container h4{font-family:Roboto,sans-serif;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;line-height:2rem;font-weight:400;text-decoration:inherit;text-transform:inherit;font-weight:500}.page-container h4{font-size:1.25rem;letter-spacing:.02em;letter-spacing:0}.page-container h5{font-size:1rem;line-height:1.75rem}.page-container h5,.page-container h6{font-family:Roboto,sans-serif;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-weight:400;letter-spacing:.04em;text-decoration:inherit;text-transform:inherit;letter-spacing:0}.page-container h6{font-size:.938rem;line-height:1.5rem}.page-container p{font-family:Roboto,sans-serif;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-size:.875rem;line-height:1.25rem;font-weight:400;letter-spacing:.04em;text-decoration:inherit;text-transform:inherit;color:#4a4a4a;letter-spacing:0}.page-container .preview-datasets{margin-bottom:70px}.page-container .preview,.page-container .previews{display:flex;flex-direction:column}.page-container .preview{justify-content:space-between;border:1px solid rgba(0,0,0,.12);margin-bottom:24px;padding:16px;text-align:center}.page-container .preview:last-child{margin-bottom:0}.page-container .preview h5{font-weight:500;line-height:1.3rem;margin:0 0 4px;letter-spacing:0}.page-container .preview h6{color:#4a4a4a;letter-spacing:0;margin:0}.page-container .preview h6.highlight-blue{color:#4a90e2}.page-container .preview p{font-family:Roboto,sans-serif;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-size:.75rem;line-height:1.25rem;font-weight:400;letter-spacing:.08em;text-decoration:inherit;text-transform:inherit;letter-spacing:0;font-size:.8125rem;margin-left:auto;margin-right:auto;max-width:320px}.page-container .code{background-color:#f8f8f8;font-family:monospace;font-size:1.125rem;padding:16px 50px;position:relative}.page-container .code:before{color:#999;content:"$";left:24px;position:absolute}@media (min-width:840px){.page-container .previews{align-items:stretch;flex-direction:row;justify-content:space-between;min-height:292px}.page-container .preview{margin-bottom:0;max-width:196px}}/*!
+ */.snapper{margin:0 auto;max-width:1024px}.page-container{margin:0 auto;max-width:820px}.page-container.mdc-layout-grid{margin-bottom:100px}.page-container h2{font-family:Roboto,sans-serif;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-size:2.125rem;line-height:2.5rem;font-weight:400;letter-spacing:normal;text-decoration:inherit;text-transform:inherit;letter-spacing:0}.page-container h3{font-size:1.5rem;letter-spacing:normal;letter-spacing:0;margin-bottom:12px}.page-container h3,.page-container h4{font-family:Roboto,sans-serif;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;line-height:2rem;font-weight:400;text-decoration:inherit;text-transform:inherit;font-weight:500}.page-container h4{font-size:1.25rem;letter-spacing:.02em;letter-spacing:0;margin-bottom:10px}.page-container h5{font-size:1rem;line-height:1.75rem}.page-container h5,.page-container h6{font-family:Roboto,sans-serif;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-weight:400;letter-spacing:.04em;text-decoration:inherit;text-transform:inherit;letter-spacing:0}.page-container h6{font-size:.938rem;line-height:1.5rem}.page-container p{font-family:Roboto,sans-serif;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-size:.875rem;line-height:1.25rem;font-weight:400;letter-spacing:.04em;text-decoration:inherit;text-transform:inherit;color:#4a4a4a;letter-spacing:0}/*!
  * Human Cell Atlas
  * https://www.humancellatlas.org/
  *
- * Styles for jumbotron area.
- */.jumbotron{align-items:center;display:flex;flex-direction:column;margin-bottom:86px;margin-top:60px;text-align:center}.jumbotron .value-prop{margin:0 0 16px}.jumbotron .description{margin:0;max-width:600px}/*!
+ * Styles for jumbotron area on home page.
+ */.jumbotron{align-items:center;display:flex;flex-direction:column;margin-bottom:72px;margin-top:60px;text-align:center}.jumbotron .value-prop{margin:0 0 16px}.jumbotron .description{font-family:Roboto,sans-serif;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-size:1rem;line-height:1.75rem;font-weight:400;letter-spacing:.04em;text-decoration:inherit;text-transform:inherit;letter-spacing:0;margin:0;max-width:600px}/*!
+ * Human Cell Atlas
+ * https://www.humancellatlas.org/
+ *
+ * Styles for preview detasets area on home page.
+ */.preview-datasets{margin-bottom:60px}.preview-datasets .caption{font-family:Roboto,sans-serif;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-size:.875rem;line-height:1.25rem;font-weight:400;letter-spacing:.04em;text-decoration:inherit;text-transform:inherit;color:#4a4a4a;letter-spacing:0;margin-top:12px}.preview,.previews{display:flex;flex-direction:column}.preview{justify-content:space-between;border:1px solid rgba(0,0,0,.12);margin-bottom:24px;padding:16px;text-align:center}.preview:last-child{margin-bottom:0}.preview h5{font-size:22px;font-weight:500;margin:0 0 4px;letter-spacing:0}.preview h6{font-family:Roboto,sans-serif;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-size:1rem;line-height:1.75rem;font-weight:400;letter-spacing:.04em;text-decoration:inherit;text-transform:inherit;color:#4a4a4a;letter-spacing:0;margin:0}.preview h6.highlight-blue{color:#4a90e2}.preview p{font-family:Roboto,sans-serif;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-size:.75rem;line-height:1.25rem;font-weight:400;letter-spacing:.08em;text-decoration:inherit;text-transform:inherit;letter-spacing:0;font-size:.8125rem;margin-left:auto;margin-right:auto;max-width:320px}@media (min-width:840px){.page-container .previews{align-items:stretch;flex-direction:row;justify-content:space-between;min-height:292px}.page-container .preview{margin-bottom:0;max-width:210px}}/*!
  * Human Cell Atlas
  * https://www.humancellatlas.org/
  *
