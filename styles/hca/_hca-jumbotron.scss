@@ -2,14 +2,17 @@
  * Human Cell Atlas
  * https://www.humancellatlas.org/
  *
- * Styles for jumbotron area.
+ * Styles for jumbotron area on home page.
  */
+
+// Dependencies
+@import "@material/typography/mdc-typography";
 
 .jumbotron {
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-bottom: 86px;
+    margin-bottom: 72px;
     margin-top: 60px; // 15px inside toolbar + 60px above text = 75px as per spec
     text-align: center;
 
@@ -20,6 +23,8 @@
 
     // Override default Material margins to space subtext correct distance from main text
     .description {
+        @include mdc-typography(subheading2);
+        letter-spacing: 0; // Override non-standard MDC letter spacing
         margin: 0;
         max-width: 600px;
     }

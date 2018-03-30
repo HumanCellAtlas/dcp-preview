@@ -5,8 +5,12 @@
  * Global and imported styles.
  */
 
+@import "hca-download-instructions";
+@import "hca-footer";
+@import "hca-global";
 @import "hca-home"; // Styles specific to home page
 @import "hca-jumbotron";
+@import "hca-preview-datasets";
 @import "hca-theme";
 @import "hca-toolbar";
 @import "hca-typography";

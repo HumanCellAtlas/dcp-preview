@@ -1,0 +1,28 @@
+/*!
+ * Human Cell Atlas
+ * https://www.humancellatlas.org/
+ *
+ * Styles for download instructions area on home page.
+ */
+
+// Dependencies
+@import "@material/typography/mdc-typography";
+
+.download-instructions {
+    h4 {
+        
+    }
+    .code {
+        background-color: #f8f8f8;
+        font-family: monospace;
+        font-size: 1.125rem;
+        padding: 16px 50px;
+        position: relative;
+        &:before {
+            color: #999999;
+            content: '$';
+            left: 24px;
+            position: absolute;
+        }
+    }
+}

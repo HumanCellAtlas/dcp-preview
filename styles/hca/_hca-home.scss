@@ -9,9 +9,14 @@
 @import "hca-vars";
 @import "@material/typography/mdc-typography";
 
+.snapper {
+    margin: 0 auto;
+    max-width: 1024px;
+}
+
 .page-container {
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 820px;
     &.mdc-layout-grid{
         margin-bottom: 100px;
     }
@@ -23,11 +28,13 @@
         @include mdc-typography(headline);
         font-weight: 500;
         letter-spacing: 0;
+        margin-bottom: 12px; /* Warning - off the spec to match static page mocks */
     }
     h4 {
         @include mdc-typography(title);
         font-weight: 400;
         letter-spacing: 0;
+        margin-bottom: 10px; /* Warning - off the spec to match static page mocks */
     }
     h5 {
         @include mdc-typography(subheading2);
@@ -41,79 +48,5 @@
         @include mdc-typography(body1);
         color: $hca-color-text;
         letter-spacing: 0;
-    }
-    .preview-datasets {
-        margin-bottom: 70px;
-    }
-    .previews {
-        display: flex;
-        flex-direction: column;
-    }
-    .preview {
-        justify-content: space-between;
-        border: 1px solid $md-black-12;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 24px;
-        padding: 16px;
-        text-align: center;
-        &:last-child {
-            margin-bottom: 0;
-        }
-        h5 {
-            font-weight: 500;
-            line-height: 1.3rem;
-            margin: 0 0 4px;
-            letter-spacing: 0;
-        }
-        h6 {
-            color: $hca-color-text;
-            letter-spacing: 0;
-            margin: 0;
-            &.highlight-blue {
-                color: #4a90e2;
-            }
-        }
-        p {
-            @include mdc-typography(caption);
-            letter-spacing: 0;
-            font-size: 0.8125rem;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 320px;
-
-        }
-    }
-    .code {
-        background-color: #f8f8f8;
-        font-family: monospace;
-        font-size: 1.125rem;
-        padding: 16px 50px;
-        position: relative;
-        &:before {
-            color: #999999;
-            content: '$';
-            left: 24px;
-            position: absolute;
-        }
-    }
-}
-
-/**
- * Large tablet, medium +
- */
-@media (min-width: $md-tablet-portrait-lg-min) {
-
-    .page-container {
-        .previews {
-            align-items: stretch;
-            flex-direction: row;
-            justify-content: space-between;
-            min-height: 292px;
-        }    
-        .preview {
-            margin-bottom: 0;
-            max-width: 196px;
-        }
     }
 }

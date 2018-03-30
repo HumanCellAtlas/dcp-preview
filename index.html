@@ -32,80 +32,91 @@
     <link rel="stylesheet" href="bundle.css">
 </head>
 <body class="mdc-typography">
-    <header class="mdc-toolbar">
-        <div class="mdc-toolbar__row">
-            <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-                <img src="images/logo/hca-data-portal/logo-hca-data-portal@1x.png" srcset="images/logo/hca-data-portal/logo-hca-data-portal@2x.png 2x, images/logo/hca-data-portal/logo-hca-data-portal@3x.png 3x">
-            </section>
-        </div>
-    </header>
-    <div class="page-container mdc-layout-grid">
-        <div class="mdc-layout-grid__inner">
-            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-                <section class="jumbotron">
-                    <h2 class="value-prop">Download Human Cell Atlas Preview Datasets</h2>
-                    <p class="description">These preliminary datasets include only FASTQ files and metadata. Secondary analysis results such as BAMs and expression counts will be made available in summer 2018. If you have questions please email <a href="mailto:data-help@humancellatlas.org">data-help@humancellatlas.org</a>.</p>
+    <div class="snapper">
+        <header class="mdc-toolbar">
+            <div class="mdc-toolbar__row">
+                <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                    <img src="images/logo/hca-data-portal/logo-hca-data-portal@1x.png" srcset="images/logo/hca-data-portal/logo-hca-data-portal@2x.png 2x, images/logo/hca-data-portal/logo-hca-data-portal@3x.png 3x">
                 </section>
-                <section class="preview-datasets">
-                    <h3>Preview Datasets</h3>
-                    <div class="previews">
-                        <div class="preview">
-                            <div>
-                                <h5>Immune Cell Atlas</h5>
-                                <h6>Dr. Aviv Ragev</h6>
-                                <h6>Broad Inst.</h6>
-                                <p>
-                                    Sed posuere consectetur est at lobortis. Duis mollis, est non commodo luctus, nisi erat.
-                                </p>
+            </div>
+        </header>
+        <div class="page-container mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                    <section class="jumbotron">
+                        <h2 class="value-prop">Human Cell Atlas Preview Datasets</h2>
+                        <p class="description">The first single-cell sequencing datasets from the Human Cell Atlas are now available to the research community.</p>
+                    </section>
+                    <section class="preview-datasets">
+                        <div class="previews">
+                            <div class="preview">
+                                <div>
+                                    <h5>Census of Immune Cells</h5>
+                                    <h6>Dr. Aviv Ragev</h6>
+                                    <h6>Broad Inst.</h6>
+                                    <p>
+                                        Profiling of immunocytes by single cell RNA-seq for understanding human health and disease.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h6>1 million cells</h6>
+                                    <h6>3TB of data</h6>
+                                    <h6 class="highlight-blue">ABC123</h6>
+                                </div>
                             </div>
-                            <div>
-                                <h6>1 million cells</h6>
-                                <h6>3TB of data</h6>
-                                <h6 class="highlight-blue">ABC123</h6>
+                            <div class="preview">
+                                <div>
+                                    <h5>Melanoma Infiltration of Stromal and Immune Cells</h5>
+                                    <h6>Dr. Sarah Teichmann & Dr. Jacqueline Shields</h6>
+                                    <h6>Wellcome Sanger Institute & University of Cambridge</h6>
+                                    <p>
+                                        Single cell RNA-seq of CD45+ and CD45- cells isolated from tumour and lymph nodes of a mouse model of melanoma.
+                                    </p>    
+                                </div>
+                                <div>
+                                    <h6>50,000 cells</h6>
+                                    <h6>1.5TB of data</h6>
+                                    <h6 class="highlight-blue">EFF123</h6>
+                                </div>
+                            </div>
+                            <div class="preview">
+                                <div>
+                                    <h5>Ischaemic Sensitivity of Human Tissue</h5>
+                                    <h6>Dr. Mike Stubbington</h6>
+                                    <h6>Wellcome Sanger Institute</h6>
+                                    <p>
+                                        Assessment of ischaemic sensitivity of human spleen tissue by single cell RNA-seq.
+                                    </p>    
+                                </div>
+                                <div>
+                                    <h6>30,000 cells</h6>
+                                    <h6>800GB of data</h6>
+                                    <h6 class="highlight-blue">BEG984</h6>
+                                </div>
                             </div>
                         </div>
-                        <div class="preview">
-                            <div>
-                                <h5>T-cells from Mouse Melanoma</h5>
-                                <h6>Dr. Sarah Teichmann</h6>
-                                <h6>Sanger Inst.</h6>
-                                <p>
-                                    Sed posuere consectetur est at lobortis. Duis mollis, est non commodo luctus, nisi erat.
-                                </p>    
-                            </div>
-                            <div>
-                                <h6>50,000 cells</h6>
-                                <h6>1.5TB of data</h6>
-                                <h6 class="highlight-blue">EFF123</h6>
-                            </div>
+                        <div class="caption">These include primary datasets (fastq and metadata). Additional analysis (alignment and quantification) produced from a standardized analysis pipeline will be made available this summer. If you have questions please email <a href="mailto:data-help@humancellatlas.org">data-help@humancellatlas.org</a>.</div>
+                    </section>
+                    <section class="download-instructions">
+                        <h3>Download instructions</h3>
+                        <h4 class="mdc-typography--title">1. Download the shell script above</h4>
+                        <p>Click on the download button to save a shell script that will download HCA data. The shell script requires a Unix environment (Linux, OS X, Windows WSL, or Windows Cygwin), as well as a Python installation with a functional pip installer.</p>
+                        <h4 class="mdc-typography--title">2. Open it in the terminal and run</h4>
+                        <p>After saving the script, run it in your terminal as follows:</p>
+                        <div class="code">chmod +x ~/Downloads/FILENAME.sh</div>
+                        <p>Next, run:</p>
+                        <div class="code">~/Downloads/FILENAME.sh</div>
+                        <p>The shell script will install the HCA command line client using the    pip    installer, then call the client to download a list of HCA DSS bundle IDs.</p>
+                        <h4 class="mdc-typography--title">3. Open the script in a text editor for instructions</h4>
+                        <p>Open the script in a text editor to see the list of IDs and download commands.</p>
+                    </section>
+                    <section class="footer">
+                        <div>
+                            <img src="images/icon/icon-cc-by@1x.png" srcset="images/icon/icon-cc-by@2x.png 2x, images/icon/icon-cc-by@3x.png 3x">
                         </div>
-                        <div class="preview">
-                            <div>
-                                <h5>Spleen Study</h5>
-                                <h6>Dr. Mike Stubbington</h6>
-                                <h6>Sanger Inst.</h6>
-                                <p>
-                                    Sed posuere consectetur est at lobortis. Duis mollis, est non commodo luctus, nisi erat.
-                                </p>    
-                            </div>
-                            <div>
-                                <h6>30,000 cells</h6>
-                                <h6>800GB of data</h6>
-                                <h6 class="highlight-blue">BEG984</h6>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <h3>Download Instructions</h3>
-                    <p>Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur.</p>
-                    <h4 class="mdc-typography--title">Install the HCA CLI tool in the terminal</h4>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque.</p>
-                    <div class="code">pip install hca</div>
-                    <h4 class="mdc-typography--title">Nullam id dolor id nibh ultricies vehicula ut id elit</h4>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur.</p>
-                    <div class="code">Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
-                </section>
+                        <p>This Preview Data Release is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. This is the license for the preview data and the license for other HCA data in the future may differ.</p>
+                    </section>
+                </div>
             </div>
         </div>
     </div>
