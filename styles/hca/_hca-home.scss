@@ -7,46 +7,15 @@
 
 // Dependencies
 @import "hca-vars";
-@import "@material/typography/mdc-typography";
 
+// Snap home page to max width of 1024 to prevent logo from positioning itself too far left on large + devices
 .snapper {
     margin: 0 auto;
     max-width: 1024px;
 }
 
+// Create middle channel to house content.
 .page-container {
     margin: 0 auto;
-    max-width: 820px;
-    &.mdc-layout-grid{
-        margin-bottom: 100px;
-    }
-    h2 {
-        @include mdc-typography(display1);
-        letter-spacing: 0;
-    }
-    h3 {
-        @include mdc-typography(headline);
-        font-weight: 500;
-        letter-spacing: 0;
-        margin-bottom: 12px; /* Warning - off the spec to match static page mocks */
-    }
-    h4 {
-        @include mdc-typography(title);
-        font-weight: 400;
-        letter-spacing: 0;
-        margin-bottom: 10px; /* Warning - off the spec to match static page mocks */
-    }
-    h5 {
-        @include mdc-typography(subheading2);
-        letter-spacing: 0;
-    }
-    h6 {
-        @include mdc-typography(subheading1);
-        letter-spacing: 0;
-    }
-    p {
-        @include mdc-typography(body1);
-        color: $hca-color-text;
-        letter-spacing: 0;
-    }
+    max-width: 868px;
 }

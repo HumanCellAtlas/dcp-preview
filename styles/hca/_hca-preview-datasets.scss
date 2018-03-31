@@ -6,54 +6,70 @@
  */
 
 // Dependencies
-@import "@material/typography/mdc-typography";
+@import "hca-vars";
 
 .preview-datasets {
     margin-bottom: 60px;
-    .caption {
-        @include mdc-typography(body1);
-        color: $hca-color-text;
-        letter-spacing: 0; // Override non-standard MDC letter spacing
-        margin-top: 12px;
-    }
-}
-.previews {
-    display: flex;
-    flex-direction: column;
-}
-.preview {
-    justify-content: space-between;
-    border: 1px solid $md-black-12;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 24px;
-    padding: 16px;
-    text-align: center;
-    &:last-child {
-        margin-bottom: 0;
-    }
-    h5 {
-        font-size: 22px; /* Non-standard font size */
-        font-weight: 500;
-        margin: 0 0 4px;
-        letter-spacing: 0;
-    }
-    h6 {
-        @include mdc-typography(subheading2);
-        color: $hca-color-text;
-        letter-spacing: 0;
-        margin: 0;
-        &.highlight-blue {
-            color: #4a90e2;
+    .previews {
+        display: flex;
+        flex-direction: column;
+        .preview {
+            justify-content: space-between;
+            border: 1px solid #cccccc;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 24px;
+            padding: 16px;
+            .preview-meta {
+                font-size: 0.875rem;
+                margin-top: 20px;
+                /* Meta row */
+                > div {
+                    display: flex;
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+                    &:last-child {
+                        margin-bottom: 35px;
+                    }
+                    /* Meta cell */
+                    > div {
+                        &:first-child {
+                            font-weight: 500;
+                            min-width: 84px;
+                        }
+                    }
+                }
+            }
+            a {
+                background-color: #1288e4;
+                border-radius: 2px;
+                color: #ffffff;
+                display: flex;
+                flex-direction: column;
+                font-size: 0.8125rem;
+                height: 50px;
+                justify-content: center;
+                margin: 0 auto;
+                text-align: center;
+                width: 200px;
+                span {
+                    display: block;
+                    margin-top: 2px;
+                }
+            }
+            .caption {
+                font-size: 0.75rem;
+                line-height: 1.188rem;
+                margin-top: 5px;
+                text-align: center;
+            }
         }
     }
-    p {
-        @include mdc-typography(caption);
-        letter-spacing: 0;
+    .caption {
         font-size: 0.8125rem;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 320px;
+        line-height:  1.188rem;
+        margin-top: 12px;
     }
 }
 
@@ -63,15 +79,24 @@
 @media (min-width: $md-tablet-portrait-lg-min) {
 
     .page-container {
-        .previews {
-            align-items: stretch;
-            flex-direction: row;
-            justify-content: space-between;
-            min-height: 292px;
-        }
-        .preview {
-            margin-bottom: 0;
-            max-width: 210px;
+        .preview-datasets {
+            .previews {
+                align-items: stretch;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .preview {
+                margin-bottom: 0;
+                max-width: 227px;
+                .preview-meta { 
+                    min-height: 192px;
+                }
+                /* Dataset breakdown */
+                > div:last-child {
+                    border-top: 1px solid #eaeaea;
+                    margin-top: 20px;
+                }
+            }
         }
     }
 }

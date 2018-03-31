@@ -7,18 +7,15 @@
 
 // Dependencies
 @import "hca-vars";
-@import "@material/typography/mdc-typography";
 
 .footer {
-    border-top: 1px solid #eaeaea;
     display: flex;
     flex-direction: column;
-    margin-top: 52px;
+    margin-bottom: 100px;
     padding-top: 10px;
-    img {
-    }
     p {
-        @include mdc-typography(body1);
+        font-size: 0.8125rem;
+        line-height: 1.188rem;
         margin: 10px 0 0 0;
     } 
 }

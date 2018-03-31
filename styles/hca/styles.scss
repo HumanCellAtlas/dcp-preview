@@ -5,14 +5,23 @@
  * Global and imported styles.
  */
 
+// Core styles
+@import "normalize.scss/normalize";
+@import "@material/layout-grid/mdc-layout-grid"; // Layout Grid - https://material.io/components/web/catalog/layout-grid/
+
+// Base app styles
+@import "hca-fonts";
+@import "hca-theme";
+@import "hca-typography";
+
+// Site wide styles
+@import "hca-global";
+@import "hca-toolbar";
+
+// Home page styles and components
+@import "hca-attribution";
 @import "hca-download-instructions";
 @import "hca-footer";
-@import "hca-global";
-@import "hca-home"; // Styles specific to home page
+@import "hca-home";
 @import "hca-jumbotron";
 @import "hca-preview-datasets";
-@import "hca-theme";
-@import "hca-toolbar";
-@import "hca-typography";
-@import "@material/layout-grid/mdc-layout-grid"; // Layout Grid - https://material.io/components/web/catalog/layout-grid/
-@import "normalize.scss/normalize";
