@@ -10,9 +10,11 @@
 body {
     color: $hca-color-text;
     font-family: "Gotham HTF", sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 @mixin heading-base {
+    color: #000000;
     font-family: "DIN", sans-serif;
     font-weight: 600;
 }

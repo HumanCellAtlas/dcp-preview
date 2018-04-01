@@ -7,6 +7,7 @@
 
 @mixin code-base {
     background-color: #f8f8f8;
+    border-radius: 3px;
     color: $md-black-100;
     font-family: monospace;
     font-size: 1.125rem;

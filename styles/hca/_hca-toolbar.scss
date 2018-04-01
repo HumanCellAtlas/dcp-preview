@@ -10,6 +10,9 @@
 
 // HCA overrides
 .mdc-toolbar {
-    @include mdc-toolbar-fill-color($mdc-theme-background); // background-color
-    @include mdc-toolbar-ink-color(black); // color
+    @include mdc-toolbar-fill-color($mdc-theme-background); /* background-color */
+    @include mdc-toolbar-ink-color(black); /* color */
+    img {
+        margin-top: 12px; /** Forces toolbar height to be 79px */
+    }
 }
