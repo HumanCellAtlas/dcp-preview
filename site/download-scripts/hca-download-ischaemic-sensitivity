@@ -1,18 +1,67 @@
 #!/bin/bash
 
-set -euo pipefail
-
-pip install --upgrade hca || (echo "Unable to install HCA. Retrying with sudo..."; sudo pip install --upgrade hca)
+DATASET_NAME="ischaemic_sensitivity"
 
 REPLICA=aws
-HCA=hca
-if ! type $HCA >/dev/null 2>&1; then
-    HCA=~/.local/bin/hca
-fi
+HCA_CONFIG=~/.config/hca/config.json
+TMPDIR=`pwd`/.hca-tmp
+LOGFILE=${TMPDIR}/log
+BUNDLE_DIR=${DATASET_NAME}
+
+function initialize() {
+    set -euo pipefail
+
+    mkdir -p ${TMPDIR}
+    cp /dev/null ${LOGFILE}
+}
+
+function install_hca_tool() {
+    echo "Installing hca tool (see ${LOGFILE} for errors)..."
+
+    if ! pip install --upgrade hca >> ${LOGFILE} 2>&1 ; then
+        echo -e "\n\nThat failed, trying again as superuser.  You may be prompted for your password..."
+        sudo pip install --upgrade hca 2>&1 >> ${LOGFILE}
+    fi
+
+    HCA=hca
+    if ! type ${HCA} >/dev/null 2>&1; then
+        HCA=~/.local/bin/hca
+    fi
+}
+
+function check_hca_tool_config() {
+    echo "Checking hca tool config..."
+    if [ -e ${HCA_CONFIG} ] ; then
+        if grep -q "\"swagger_url\": \"https://dss.data.humancellatlas.org/v1/swagger.json\"" ${HCA_CONFIG} ; then
+        # We're good
+        :
+        else
+            echo -e "It looks like you have used the \"hca\" tool before and it has been configured to use an" \
+                 "environment other than production.\nPlease move, remove or correct your ${HCA_CONFIG} file."
+            exit 1
+        fi
+    fi
+}
+
+function download_bundles() {
+    mkdir -p ${DATASET_NAME}
+    for uuid in ${bundles} ; do
+        if [ -d ${BUNDLE_DIR}/${uuid} ] ; then
+            echo "Skipping $uuid, already downloaded."
+        else
+            echo "Downloading ${uuid} to ${BUNDLE_DIR}/${uuid}..."
+            ( cd ${TMPDIR} ; ${HCA} dss download --bundle-uuid ${uuid} --replica ${REPLICA} >> ${LOGFILE} )
+            mv ${TMPDIR}/${uuid} ${BUNDLE_DIR}
+            echo ""
+        fi
+    done
+}
 
 bundles="
 17a3d288-01a0-464a-9599-7375fda3353d
 "
-for uuid in $bundles; do
-    $HCA dss download --bundle-uuid $uuid --replica $REPLICA
-done
+
+initialize
+install_hca_tool
+check_hca_tool_config
+download_bundles
