@@ -9,13 +9,15 @@
 
 body {
     color: $hca-color-text;
-    font-family: "Gotham HTF", sans-serif;
+    //font-family: "Gotham HTF", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
 @mixin heading-base {
     color: #000000;
-    font-family: "DIN", sans-serif;
+    //font-family: "DIN", sans-serif;
+    font-family: din-2014, sans-serif;
     font-weight: 600;
 }
 

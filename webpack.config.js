@@ -5,7 +5,6 @@
  * Webpack configuration.
  */
 
-// const { dirname, join } = require("path");
 const path = require("path");
 
 module.exports = [{
@@ -20,7 +19,7 @@ module.exports = [{
                 {
                     loader: "file-loader",
                     options: {
-                        name: "site/bundle.css",
+                        name: "site/bundle.css"
                     }
                 },
                 { loader: "extract-loader" },
