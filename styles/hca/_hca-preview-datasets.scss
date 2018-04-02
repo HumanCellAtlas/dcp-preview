@@ -113,7 +113,7 @@
 /**
  * IE10+
  */
-@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) and (min-width: $md-tablet-portrait-lg-min) {
 
     .page-container {
         .preview-datasets {
