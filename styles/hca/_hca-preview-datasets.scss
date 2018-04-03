@@ -48,7 +48,7 @@
                     }
                 }
             }
-            a {
+            .button {
                 background-color: #1288e4;
                 border-radius: 2px;
                 color: #ffffff;
@@ -71,6 +71,13 @@
                 font-size: 0.75rem;
                 line-height: 1.188rem;
                 margin-top: 5px;
+                text-align: center;
+            }
+            .metadata {
+                font-size: 0.8125rem;
+                font-weight: 600;
+                line-height: 0.8125rem;
+                margin-top: 16px;
                 text-align: center;
             }
         }
