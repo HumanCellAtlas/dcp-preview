@@ -18,12 +18,13 @@ $md-black-100: #000000;
  **/
 $md-xl-min: 1920px;
 $md-lg-min: 1280px;
-$md-lg-max: $md-xl-min - 1;
+$md-lg-max: $md-xl-min - 1px;
 $md-md-min: 960px;
-$md-md-max: $md-lg-min - 1;
+$md-md-max: $md-lg-min - 1px;
 $md-tablet-portrait-lg-min: 840px;
-$md-tablet-portrait-md-max: $md-tablet-portrait-lg-min - 1;
+$md-tablet-portrait-md-max: $md-tablet-portrait-lg-min - 1px;
 $md-tablet-landscape-sm-min: 480px;
+$md-tablet-landscape-xs-max: $md-tablet-landscape-sm-min - 1px;
 $md-sm-min: 600px;
 $md-sm-max: $md-md-min - 1;
 $md-xs-max: $md-sm-min - 1;
