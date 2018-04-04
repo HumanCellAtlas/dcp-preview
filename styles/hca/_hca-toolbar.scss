@@ -7,6 +7,7 @@
 
 // Toolbar - https://material.io/components/web/catalog/toolbar/
 @import "@material/toolbar/mdc-toolbar";
+@import "hca-vars";
 
 // HCA overrides
 .mdc-toolbar {
@@ -14,5 +15,41 @@
     @include mdc-toolbar-ink-color(black); /* color */
     img {
         margin-top: 12px; /** Forces toolbar height to be 79px */
+    }
+}
+
+/**
+ * Extra small
+ */
+@media (max-width: $md-tablet-landscape-xs-max) {
+    .mdc-toolbar {
+        .mdc-toolbar__section--align-start {
+            padding-left: var(--mdc-layout-grid-margin-phone, 16px);
+            padding-right: var(--mdc-layout-grid-margin-phone, 16px);
+        }
+    }
+}
+
+/**
+ * Small, medium
+ */
+@media (max-width: $md-tablet-portrait-md-max) and (min-width: $md-tablet-landscape-sm-min) {
+    .mdc-toolbar {
+        .mdc-toolbar__section--align-start {
+            padding-left: var(--mdc-layout-grid-margin-tablet, 16px);
+            padding-right: var(--mdc-layout-grid-margin-tablet, 16px);
+        }
+    }
+}
+
+/**
+ * Large
+ */
+@media (min-width: $md-tablet-portrait-lg-min) {
+    .mdc-toolbar {
+        .mdc-toolbar__section--align-start {
+            padding-left: var(--mdc-layout-grid-margin-desktop, 24px);
+            padding-right: var(--mdc-layout-grid-margin-desktop, 24px);
+        }
     }
 }
