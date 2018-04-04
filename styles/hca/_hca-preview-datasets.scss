@@ -94,24 +94,22 @@
  */
 @media (min-width: $md-tablet-portrait-lg-min) {
 
-    .page-container {
-        .preview-datasets {
-            .previews {
-                align-items: stretch;
-                flex-direction: row;
-                justify-content: space-between;
+    .preview-datasets {
+        .previews {
+            align-items: stretch;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .preview {
+            margin-bottom: 0;
+            max-width: 227px;
+            .preview-meta { 
+                min-height: 192px;
             }
-            .preview {
-                margin-bottom: 0;
-                max-width: 227px;
-                .preview-meta { 
-                    min-height: 192px;
-                }
-                /* Dataset breakdown */
-                > div:last-child {
-                    border-top: 1px solid #eaeaea;
-                    margin-top: 20px;
-                }
+            /* Dataset breakdown */
+            > div:last-child {
+                border-top: 1px solid #eaeaea;
+                margin-top: 20px;
             }
         }
     }
@@ -122,11 +120,9 @@
  */
 @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) and (min-width: $md-tablet-portrait-lg-min) {
 
-    .page-container {
-        .preview-datasets {
-            .preview {
-                width: 227px;
-            }
+    .preview-datasets {
+        .preview {
+            width: 227px;
         }
     }
 }
