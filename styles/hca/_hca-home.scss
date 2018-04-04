@@ -8,14 +8,8 @@
 // Dependencies
 @import "hca-vars";
 
-// Snap home page to max width of 1024 to prevent logo from positioning itself too far left on large + devices
+// Snap home page to max width of 868px
 .snapper {
-    margin: 0 auto;
-    max-width: 1024px;
-}
-
-// Create middle channel to house content.
-.page-container {
     margin: 0 auto;
     max-width: 868px;
 }
