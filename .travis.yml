@@ -17,7 +17,7 @@ deploy:
   script: make deploy-staging-travis
   skip_cleanup: true
   on:
-    branch: staging
+    branch: staging-continuous-deployment
 env:
   global:
     - secure: GzCNhfSZe32yHeTh/5qGSxKK6MvHwhKoY7wyZVyXZ9ENRZoaKq8SJcEiwO+CsxZVv5i6KVQWDRA9So69otwR/EZB2g/nftIX3rirVaQv9FxIUVpDjfXT3X4AF9Z5qyHRZaud9eg+bRIEHIk148Orc54vX4SMpUdYU5aKE1xBzyfckc1vAP6+ushJQ6O037hLn0pmNIo58ysgvwO3pIzYs33pMXSitueoJI+bnbE0CFXJ7LpnymvYhhrEyGs6GzxfV6tVnYCpd34TPfUgHdXGuop0moMctq38vmA2O1yDA8/e4vJmDZEZGgMPRx9Z0Udxw+CIQ0wghRVDKG5q9ymprbv+OGQwjel8nS3rOfltAlqbow3Img7AmJNTRWhfA1TAOvThGzh9pevkK7uJxHC3N5edDh193muhz88aotFXNFnevBhbPSKCn4bPXmLShqH52xp4eBvykVayirFyJuc+TkGjYsodIY/t7SwiKDqckxTaJac/dd46LVr6usRjXcfXrVEvI1Fa616lRFbBEzO/dDQ7vsaW1SUq6YgGM7DS7dHiUMAAg5G3R2WIL8o06DcQWYR8TaG2xnkYx5XN/zQphWjog9S/4FCv8BmPCKiT7A9sEotLlyy09E+LqHkGfMJSStF2wgvtPo+VMZdZ1jmFEssGjKanaQ98KV/1gyJOZJI=
