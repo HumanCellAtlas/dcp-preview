@@ -16,3 +16,7 @@ deploy-prod:
 deploy-staging:
 	$(MAKE) build
 	aws s3 sync --acl public-read site/ s3://preview.staging.data.humancellatlas.org/ --profile hca
+
+deploy-staging-travis:
+  aws s3 sync --acl public-read site/ s3://preview.staging.data.humancellatlas.org/
+  aws cloudfront create-invalidation --distribution-id ${DIST_ID} --paths "/*"
