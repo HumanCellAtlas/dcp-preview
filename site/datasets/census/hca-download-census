@@ -4,23 +4,23 @@ DATASET_NAME="immune_census"
 
 REPLICA=aws
 HCA_CONFIG=~/.config/hca/config.json
-TMPDIR=`pwd`/.hca-tmp
-LOGFILE=${TMPDIR}/log
+TMPDIR="$(pwd)/.hca-tmp"
+LOGFILE="${TMPDIR}/log"
 BUNDLE_DIR=${DATASET_NAME}
 
 function initialize() {
     set -euo pipefail
 
-    mkdir -p ${TMPDIR}
-    cp /dev/null ${LOGFILE}
+    mkdir -p "${TMPDIR}"
+    cp /dev/null "${LOGFILE}"
 }
 
 function install_hca_tool() {
     echo "Installing hca tool (see ${LOGFILE} for errors)..."
 
-    if ! pip install hca --upgrade --ignore-installed six >> ${LOGFILE} 2>&1 ; then
+    if ! pip install hca --upgrade --ignore-installed six >> "${LOGFILE}" 2>&1 ; then
         echo -e "\n\nThat failed, trying again as superuser.  You may be prompted for your password..."
-        sudo pip install hca --upgrade --ignore-installed six 2>&1 >> ${LOGFILE}
+        sudo pip install hca --upgrade --ignore-installed six 2>&1 >> "${LOGFILE}"
     fi
 
     HCA=hca
@@ -44,14 +44,14 @@ function check_hca_tool_config() {
 }
 
 function download_bundles() {
-    mkdir -p ${DATASET_NAME}
+    mkdir -p "${DATASET_NAME}"
     for uuid in ${bundles} ; do
-        if [ -d ${BUNDLE_DIR}/${uuid} ] ; then
+        if [ -d "${BUNDLE_DIR}/${uuid}" ] ; then
             echo "Skipping $uuid, already downloaded."
         else
             echo "Downloading ${uuid} to ${BUNDLE_DIR}/${uuid}..."
-            ( cd ${TMPDIR} ; ${HCA} dss download --bundle-uuid ${uuid} --replica ${REPLICA} >> ${LOGFILE} )
-            mv ${TMPDIR}/${uuid} ${BUNDLE_DIR}
+            (cd "${TMPDIR}"; ${HCA} dss download --bundle-uuid ${uuid} --replica ${REPLICA} >> "${LOGFILE}")
+            mv "${TMPDIR}/${uuid}" "${BUNDLE_DIR}"
             echo ""
         fi
     done
