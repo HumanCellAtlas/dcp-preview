@@ -1,0 +1,18 @@
+/*!
+ * Human Cell Atlas
+ * https://www.humancellatlas.org/
+ *
+ * Styles for trademark section on home page.
+ */
+// Dependencies
+@import "hca-vars";
+
+.trademark {
+    border-bottom: 1px solid #eaeaea;
+    padding: 10px 0;
+    p {
+        font-size: 0.8125rem;
+        line-height: 1.188rem;
+        margin: 0;
+    }
+}

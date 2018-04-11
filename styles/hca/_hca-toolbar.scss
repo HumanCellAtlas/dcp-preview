@@ -4,7 +4,6 @@
  *
  * Material Components toolbar as well as custom, HCA-specific overrides.
  */
-
 // Toolbar - https://material.io/components/web/catalog/toolbar/
 @import "@material/toolbar/mdc-toolbar";
 @import "hca-vars";
@@ -14,7 +13,7 @@
     @include mdc-toolbar-fill-color($mdc-theme-background); /* background-color */
     @include mdc-toolbar-ink-color(black); /* color */
     img {
-        margin-top: 12px; /** Forces toolbar height to be 79px */
+        margin: 10px 0; /** Forces toolbar height to be 79px */
     }
 }
 
