@@ -7,6 +7,7 @@ build:
 deploy-prod:
 	$(MAKE) build
 	aws s3 sync --acl public-read site/ $(PRODUCTION_BUCKET) --profile hca
+	@read -p "Enter production cloudfront distribution id: " DIST_ID; aws cloudfront create-invalidation --distribution-id $$DIST_ID --paths "/*" --profile hca-prod
 
 deploy-staging:
 	$(MAKE) build
