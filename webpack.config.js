@@ -19,7 +19,7 @@ module.exports = [{
                 {
                     loader: "file-loader",
                     options: {
-                        name: "site/bundle2.css"
+                        name: "site/bundle3.css"
                     }
                 },
                 { loader: "extract-loader" },
