@@ -4,7 +4,6 @@
  *
  * Styles for preview detasets area on home page.
  */
-
 // Dependencies
 @import "hca-vars";
 
@@ -14,7 +13,7 @@
         display: flex;
         flex-direction: column;
         .preview {
-            justify-content: space-between;
+            justify-content: flex-start;
             border: 1px solid #cccccc;
             display: flex;
             flex-direction: column;
@@ -29,15 +28,17 @@
             .preview-meta {
                 font-size: 0.875rem;
                 margin-top: 20px;
+                /* Preview meta - first instance only - excludes download section */
+                &:not(.downloads) {
+                }
+                /* Download */
+                &.downloads {
+                    margin-top: 10px;
+                }
                 /* Meta row */
                 > div {
                     display: flex;
-                    &:not(:last-child) {
-                        margin-bottom: 20px;
-                    }
-                    &:last-child {
-                        margin-bottom: 35px;
-                    }
+                    margin-bottom: 20px;
                     /* Meta cell */
                     > div {
                         &:first-child {
@@ -48,43 +49,24 @@
                     }
                 }
             }
-            .button {
-                background-color: #1288e4;
-                border-radius: 2px;
-                color: #ffffff;
-                display: flex;
-                flex-direction: column;
-                font-size: 0.8125rem;
-                letter-spacing: 0.21px;
-                height: 50px;
-                justify-content: center;
-                margin: 0 auto;
-                text-align: center;
-                width: 200px;
-                span {
-                    display: block;
-                    letter-spacing: 0;
-                    margin-top: 2px;
-                }
-            }
             .caption {
                 font-size: 0.75rem;
                 line-height: 1.188rem;
-                margin-top: 5px;
-                text-align: center;
+                margin-top: -10px;
+                text-align: left;
             }
             .metadata {
                 font-size: 0.8125rem;
                 font-weight: 600;
                 line-height: 0.8125rem;
                 margin-top: 16px;
-                text-align: center;
+                text-align: left;
             }
         }
     }
     .caption {
         font-size: 0.8125rem;
-        line-height:  1.188rem;
+        line-height: 1.188rem;
         margin-top: 12px;
     }
 }
@@ -99,17 +81,30 @@
             align-items: stretch;
             flex-direction: row;
             justify-content: space-between;
-        }
-        .preview {
-            margin-bottom: 0;
-            max-width: 227px;
-            .preview-meta { 
-                min-height: 192px;
-            }
-            /* Dataset breakdown */
-            > div:last-child {
-                border-top: 1px solid #eaeaea;
-                margin-top: 20px;
+            .preview {
+                margin-bottom: 0;
+                max-width: 227px;
+                > div:first-of-type {
+                    min-height: 186px;
+                }
+                .preview-meta {
+                    min-height: 206px;
+                    /* Meta cell */
+                    > div > div:first-of-type {
+                        min-width: 81px;
+                    }
+                    /* Organ */
+                    > div:nth-of-type(2) {
+                        min-height: 36px; /* To cater for text wrapping */
+                    }
+                }
+                /* Dataset breakdown */
+                > div:nth-of-type(2) {
+                    border-bottom: 1px solid #eaeaea;
+                    border-top: 1px solid #eaeaea;
+                    margin-bottom: 10px;
+                    margin-top: 20px;
+                }
             }
         }
     }
