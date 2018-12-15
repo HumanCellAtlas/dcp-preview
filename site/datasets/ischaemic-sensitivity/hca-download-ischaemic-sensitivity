@@ -58,7 +58,13 @@ function download_bundles() {
 }
 
 bundles="
-17a3d288-01a0-464a-9599-7375fda3353d
+7050c147-8dae-4e47-b260-b729bece41cd
+b95f8b90-1488-4506-9186-a42cfe57ca25
+16971394-3dec-4604-a9d8-65c7590652e6
+8d7bfcb3-fca8-4e34-98d4-c0b2a881004c
+84be47a9-3dfd-409e-8ad3-b97c4b6f0f3c
+a5b72567-b534-4c1d-abf7-cde41a451408
+0cbd9be1-5666-4341-a364-d5fdd6eed2a9
 "
 
 initialize
