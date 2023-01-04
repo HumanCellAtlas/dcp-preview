@@ -8,7 +8,7 @@
     "file-loader": "1.1.11",
     "node-sass": "4.9.4",
     "sass-loader": "6.0.7",
-    "webpack": "3.11.0",
+    "webpack": "5.75.0",
     "webpack-dev-server": "2.11.2"
   },
   "dependencies": {
